@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+.generalContainer {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.myFavoritesTitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 13px;
+  margin: 0px auto;
+  color: rgb(248, 140, 187);
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.select {
+  display: inline;
+  border-radius: 15px;
+  padding: 10px;
+  font-family: 'Source Code Pro', monospace;
+  margin: 0px 10px;
+}
+
+.favoriteContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 80px auto;
+}
+
+.favoriteCard {
+  display: flex;
+  margin: 10px auto;
+  flex-direction: column;
+  background-color: rgba(192, 192, 192, 0.795);
+  box-shadow: 5px -5px 7px 3px rgb(23 17 17);
+  border-radius: 20px;
+  width: 17%;
+  height: 350px;
+}
+
+.favoriteImagen {
+  width: 95%;
+  margin: auto;
+}
+
+.favoriteTitle {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  margin: auto;
+}
+
+.favoriteTitlesContainer {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.favoriteTitles {
+  padding: 0px 10px;
+  font-size: medium;
+}

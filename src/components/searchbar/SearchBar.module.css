@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+.barContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 7px;
+}
+
+.buttonSearch {
+    padding: 8px;
+    margin: 5px;
+    font-family: 'Source Code Pro', monospace;
+    border-radius: 7px;
+    background-color: rgb(243 60 140);
+    color: white;
+    border: 0em;
+}
+
+.buttonSearch:hover {
+    background-color: white;
+    color: rgb(38, 6, 68);
+  }

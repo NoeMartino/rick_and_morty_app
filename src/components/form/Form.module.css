@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+.form {
+  background-color: rgb(146 217 203 / 60%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 80px auto;
+  font-family: 'Source Code Pro', monospace;
+  font-size: larger;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 120px auto;
+  border-radius: 20px;
+ 
+}
+
+.input {
+  padding: 20px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.buttonForm {
+  padding: 8px;
+  margin: 5px;
+  font-family: 'Source Code Pro', monospace;
+  border-radius: 7px;
+  background-color: rgb(243 60 140);
+  color: white;
+  border: 0em;
+}
+
+.buttonForm:hover{
+  background-color: white;
+  color: rgb(38, 6, 68)
+}
+
+.warning {
+    border: solid red 1px;
+    border-radius: 0.2em;
+  }
+  
+  .danger {
+    font-size: 11px;
+    color: red;
+    margin: auto;
+  }

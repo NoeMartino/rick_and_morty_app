@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+.divAbout {
+    background-color: rgba(192, 192, 192, 0.795);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-family: 'Source Code Pro', monospace;
+    width: 50%;
+    height: fit-content;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.imgAbout {
+    width: 70%;
+    border-radius: 30px;
+}
