@@ -1,4 +1,5 @@
 const initialState = {
+    idUser: 0,
     myFavorites: [],
     myFavoritesCopy: []
 }
@@ -49,7 +50,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 myFavorites: [...orderFavorites]
-            };
+            }
+        case "LOGIN":
+            return {
+                ...state,
+                idUser: action.payload,
+            }
         default:
             return { ...state }
     }

@@ -6,26 +6,32 @@ import Form from './components/form/Form';
 import Error from './components/error/Error';
 import Favorites from './components/favorites/Favorites';
 import { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "./redux/actions";
 
 function App () {
 
   const [characters, setCharacters] = useState([]);
 
-  const location = useLocation();
+  const [access, setAccess] = useState(false);
 
   const navigate = useNavigate();
 
-  const [access, setAccess] = useState(false);
-  const username = "noe@gm.com";
-  const password = 'noe1';
+  const location = useLocation();
 
-  const login = (userData) => {
-    if (userData.username === username && userData.password === password) {
+  //const username = "noelia.martino@live.com.ar";
+  //const password = 'noe110912';
+
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.idUser);
+
+  function logIn(userData) {
+    dispatch(login(userData.username, userData.password));
+    if (user) {
       setAccess(true);
-      navigate('/home');
+      navigate("/home");
     }
-    else(alert("Los datos ingresados son incorrectos"))
   }
 
   useEffect(() => {
@@ -45,7 +51,7 @@ function App () {
          } else {
             window.alert('No hay personajes con ese ID');
          }
-      });
+      })
   };
 
   const onClose = (id) => {
@@ -66,7 +72,7 @@ function App () {
         <Nav onSearch={onSearch} random={random} logout={logout} />
       )}
       <Routes>
-        <Route exact path="/" element={<Form login={login} />}></Route>
+        <Route exact path="/" element={<Form logIn={logIn} />}></Route>
         <Route exact path="/home" element={<Cards characters={characters} onClose={onClose} />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/detail/:detailId" element={<Detail />} />
